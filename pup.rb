@@ -21,7 +21,7 @@ table {
 
 puts "This is a test"
 
-client = Mysql2::Client.new(:host => "10.130.128.41", :username => "root", :database => "pup")
+client = Mysql2::Client.new(:host => "localhost", :username => "root", :database => "pup")
 results = client.query("DESC users")
 
 puts "<table>"

@@ -32,6 +32,8 @@ results.each do |row|
 end
 puts "</table>"
 
-puts "<img src='http://resnlabs.com/wp-content/uploads/2012/05/GiddyUpright.gif'/>"
+results = client.query("SELECT * FROM users WHERE first_name='lapin'")
+
+puts "<img src='#{results.first[url]}'/>"
 
 puts "</body></html>"

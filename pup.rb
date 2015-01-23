@@ -34,6 +34,6 @@ puts "</table>"
 
 results = client.query("SELECT * FROM users WHERE first_name='lapin'")
 
-puts "<img src='#{results.first[url]}'/>"
+puts "<img src='#{results.first['url']}'/>"
 
 puts "</body></html>"

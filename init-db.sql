@@ -1,4 +1,4 @@
-DROP database pup;
+DROP database IF EXISTS pup;
 CREATE database pup;
 USE pup;
 

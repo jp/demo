@@ -3,6 +3,7 @@
 require 'cgi'
 require 'rubygems'
 require 'mysql2'
+require 'socket'
 
 cgi = CGI.new
 puts cgi.header
@@ -20,6 +21,15 @@ table {
 <body>"
 
 puts "This is a test"
+
+puts "<br>"
+
+hostname = Socket.gethostbyname(Socket.gethostname).first
+puts "Server name : #{hostname}"
+
+puts "<br>"
+
+puts "File modified at : #{File.mtime('/var/www/cgi-bin/bar.rb')}"
 
 client = Mysql2::Client.new(:host => "localhost", :username => "root", :database => "pup")
 results = client.query("DESC users")

@@ -24,10 +24,10 @@ puts "This is a test"
 
 puts "<br>"
 
-hostname = Socket.gethostbyname(Socket.gethostname).first
-puts "Server name : #{hostname}"
+#hostname = Socket.gethostbyname(Socket.gethostname).first
+#puts "Server name : #{hostname}"
 
-puts "<br>"
+#puts "<br>"
 
 puts "File modified at : #{File.mtime('/var/www/cgi-bin/bar.rb')}"
 
